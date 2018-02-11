@@ -79,14 +79,14 @@ lytter på port 3000! //output assuming no errors!
 The application is an HTTP server that listens on localhost:3000, on the following endpoints:
 
 
-| ENDPOINT  | Function |
+| METHOD | ENDPOINT  | Function |
 | ------------- | ------------- |
-| /uniqueusers  | Returns the number of unique users in the DB  |
-| /mostlinkedusers  | Returns the most commonly linked users in the DB  |
-| /mostmentionedusers | Returns the most commenly mentioned users in the DB  |
-| /mostactiveusers | Returns the users with the most posts in the DB  |
-| /happypolarity | Returns the users with the highest average polarity AND more than 150 posts  |
-| /unhappypolarity | Returns the users with the lowest average polarity AND more than 150 posts  |
+| GET| /uniqueusers  | Returns the number of unique users in the DB  |
+| GET  | /mostlinkedusers  | Returns the most commonly linked users in the DB  |
+| GET  | /mostmentionedusers | Returns the most commenly mentioned users in the DB  |
+| GET | /mostactiveusers | Returns the users with the most posts in the DB  |
+| GET  | /happypolarity | Returns the users with the highest average polarity AND more than 150 posts  |
+| GET  | /unhappypolarity | Returns the users with the lowest average polarity AND more than 150 posts  |
 
 
 This means that if you are running the application properly, you should be able to grap a webbrowser
