@@ -109,7 +109,7 @@ I reccomend jsonlint.com if you want to see the pretty print of the results, jus
 ## Navigation
 - app.js is the entry point for the program and contains depedencies, routes and http stuff
 - dbFacade.js contains all the logic for communicating with the database
--/routes/index contains all the endpoints for the application
+- /routes/index contains all the endpoints for the application
 
 
 
