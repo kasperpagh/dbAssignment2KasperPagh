@@ -99,7 +99,15 @@ number of unique users (ie. {"Total number of unique users":659774}).
 Please give your machine atleast 30 seconds to execute each of the above queries, since they are quite heavy on the DB.
 This time can of course be reduced, through clever use of indices (i would suggest: text, users and polarity - assuming you have the memory, prolly round 500 mb)  
 
+In case you don't want to reimport the CSV file, just to satisfy my naming convention, you can just make an edit in the <i>dbFacade.js</i> file.
+At the very top of the file, you'll find two constants called: db_name and col_name, you can then simply set these to whatever value 
+you choose when you imported the data.
 
+
+## Navigation
+- app.js is the entry point for the program and contains depedencies, routes and http stuff
+- dbFacade.js contains all the logic for communicating with the database
+-/routes/index contains all the endpoints for the application
 
 
 
