@@ -27,7 +27,7 @@ You can also install a "real" instance of MongoDB, if you follow the appropriate
 https://docs.mongodb.com/manual/installation/
 
 NB. I will assume that your Mongo instance runs on the localhost, using the default port. Otherwise you'll have to edit my code
-to account for the new IP.
+to account for the new IP. (see dbFacade.js file)
 
 #### Step 3
 Next you'll need to populate the Database with the twitter data provided by Helge.
