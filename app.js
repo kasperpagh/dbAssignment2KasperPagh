@@ -11,7 +11,6 @@ const pretty = require('express-prettify');
 const client = require("mongodb").MongoClient;
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 
 var app = express();
 
@@ -28,7 +27,7 @@ app.use(pretty({query: 'pretty'}));
 
 
 app.use('/', index);
-app.use('/users', users);
+
 
 const server = http.createServer(app);
 
@@ -38,34 +37,10 @@ server.listen("3000", function (err)
     {
         console.log("lytter på port 3000!");
 
-        // facade.getUserWhoLinkTheMost(10, function (docs)
-        // {
-        //     console.log("her er de user der linker flest users \n");
-        //     console.log(docs);
-        //     console.log("\n");
-        // });
-        //
-        // facade.getNumberOfUniqueUsers(function (users)
-        // {
-        //     console.log("her er antal unique users \n ANTAL USERS: " + users);
-        //     console.log("\n");
-        // });
-        //
-        // facade.mostMentionedUser(5, function (users)
-        // {
-        //     console.log("her er most mentioned users \n");
-        //     console.log(users);
-        //     console.log("\n");
-        // });
-        //
-        // facade.mostActiveUsersByPostCount(10, function (users)
-        // {
-        //     console.log("her er mest aktive users \n");
-        //     console.log(users);
-        //     console.log("\n");
-        // });
-
-
+    }
+    else
+    {
+        console.log("warning fuckery abound!");
     }
 });
 
@@ -74,7 +49,7 @@ app.use(function (req, res, next)
 {
     var err = new Error('Not Found');
     err.status = 404;
-    next(err);
+    res.send("THIS PAGE IS NOT A THING OK, STOP TRYING TO MAKE THIS PAGE A THING!")
 });
 
 // error handler
