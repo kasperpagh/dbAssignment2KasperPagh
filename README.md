@@ -10,12 +10,14 @@ This application is written in node.js, and functions by exposing a number of AP
 
 To run the code you'll need to have Nodejs and MongoDB installed. 
 
+<b>Remeber to add all the binaries to your path for convinience!!</b>
+
 #### Step 1
 Get the node installer from https://nodejs.org/en/. Here you can get installation packages for Mac, Win and linux. 
 If you'd like to install useing apt-get (eg. on VM without GUI), 
 follow these instructions: https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions
 
-Remeber to add all the binaries to your path for convinience!!
+
 
 #### Step 2
 Obvously you're gonna need an instance of MongoDB (mongod) up and running for this project. 
@@ -31,7 +33,7 @@ to account for the new IP.
 Next you'll need to populate the Database with the twitter data provided by Helge.
 
 To do this (and ensure you use the same DB and Collection names as me) first run the .csv file
-through sed as follows (assuming ofcause that you haven't renamed the file):
+through sed as follows (assuming of course that you haven't renamed the file):
 
 ```sh
 sed -i '1s;^;polarity,id,date,query,user,text\n;' training.1600000.processed.noemoticon.csv
@@ -89,7 +91,15 @@ The application is an HTTP server that listens on localhost:3000, on the followi
 
 This means that if you are running the application properly, you should be able to grap a webbrowser
 and navigate to: http://localhost:3000/uniqueusers (or whatever), and you'll be presented with a JSON object, cotaining the
-number of unique users.
+number of unique users (ie. {"Total number of unique users":659774}).
+
+
+## Final notes
+
+Please give your machine atleast 30 seconds to execute each of the above queries, since they are quite heavy on the DB.
+This time can of course be reduced, through clever use of indices (i would suggest: text, users and polarity - assuming you have the memory, prolly round 500 mb)  
+
+
 
 
 
