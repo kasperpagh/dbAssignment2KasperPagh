@@ -39,7 +39,7 @@ through sed as follows (assuming of course that you haven't renamed the file):
 sed -i '1s;^;polarity,id,date,query,user,text\n;' training.1600000.processed.noemoticon.csv
 ```
 
-Next up you'll need to import the data to MongoDB, for the you'll need the MongoImport tool (ships with the other mongo related binaries).
+Next up you'll need to import the data to MongoDB, for this you'll need the MongoImport tool (ships with the other mongo related binaries).
 
 ```sh
 mongoimport -d twitter -c tweets --type csv --file {path to the csv file} --headerline
