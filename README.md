@@ -103,6 +103,8 @@ In case you don't want to reimport the CSV file, just to satisfy my naming conve
 At the very top of the file, you'll find two constants called: db_name and col_name, you can then simply set these to whatever value 
 you choose when you imported the data.
 
+I reccomend jsonlint.com if you want to see the pretty print of the results, just copy-paste the response and press "validate JSON"
+
 
 ## Navigation
 - app.js is the entry point for the program and contains depedencies, routes and http stuff
