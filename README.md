@@ -79,14 +79,14 @@ lytter på port 3000! //output assuming no errors!
 The application is an HTTP server that listens on localhost:3000, on the following endpoints:
 
 
-| METHOD | ENDPOINT  | Function |
-| --------|----- | ------------- |
-| GET | /uniqueusers  | Returns the number of unique users in the DB  |
-| GET | /mostlinkedusers  | Returns the most commonly linked users in the DB  |
-| GET | /mostmentionedusers | Returns the most commenly mentioned users in the DB  |
-| GET | /mostactiveusers | Returns the users with the most posts in the DB  |
-| GET | /happypolarity | Returns the users with the highest average polarity AND more than 150 posts  |
-| GET | /unhappypolarity | Returns the users with the lowest average polarity AND more than 150 posts  |
+| METHOD | ENDPOINT  | Function | Output |
+| --------|----- | ------------- | ------------- |
+| GET | /uniqueusers  | Returns the number of unique users in the DB  | {"Total number of unique users":659774} |
+| GET | /mostlinkedusers  | Returns the most commonly linked users in the DB  | {"most linked users":[{"_id":"lost_dog","total":1098},{"_id":"tweetpet","total":620},{"_id":"VioletsCRUK","total":575},{"_id":"SallytheShizzle","total":515},{"_id":"tsarnick","total":506},{"_id":"mcraddictal","total":493},{"_id":"what_bugs_u","total":492},{"_id":"SongoftheOss","total":484},{"_id":"Karen230683","total":482},{"_id":"keza34","total":458}]}|
+| GET | /mostmentionedusers | Returns the most commenly mentioned users in the DB  | {"most mentioned users":[{"_id":"@mileycyrus","total":4310},{"_id":"@tommcfly","total":3837},{"_id":"@ddlovato","total":3349},{"_id":"@Jonasbrothers","total":1263},{"_id":"@DavidArchie","total":1222},{"_id":"@jordanknight","total":1105},{"_id":"@DonnieWahlberg","total":1085},{"_id":"@JonathanRKnight","total":1053},{"_id":"@mitchelmusso","total":1038},{"_id":"@taylorswift13","total":973}]} |
+| GET | /mostactiveusers | Returns the users with the most posts in the DB  | {"most active users":[{"_id":"lost_dog","total":549},{"_id":"webwoke","total":345},{"_id":"tweetpet","total":310},{"_id":"SallytheShizzle","total":281},{"_id":"VioletsCRUK","total":279},{"_id":"mcraddictal","total":276},{"_id":"tsarnick","total":248},{"_id":"what_bugs_u","total":246},{"_id":"Karen230683","total":238},{"_id":"DarkPiano","total":236}]} |
+| GET | /happypolarity | Returns the users with the highest average polarity AND more than 150 posts  | {"users with highest polarity and more than 150 posts":[{"_id":"KevinEdwardsJr","avg":4,"total":171},{"_id":"what_bugs_u","avg":4,"total":246},{"_id":"DarkPiano","avg":3.9152542372881354,"total":236},{"_id":"Scyranth","avg":3.9036144578313254,"total":166},{"_id":"keza34","avg":3.853881278538813,"total":219},{"_id":"shanajaca","avg":3.8309859154929575,"total":213},{"_id":"cookiemonster82","avg":3.7,"total":160},{"_id":"shellrawlins","avg":3.6729559748427674,"total":159},{"_id":"maynaseric","avg":3.6729559748427674,"total":159},{"_id":"TraceyHewins","avg":3.6587677725118484,"total":211}]} |
+| GET | /unhappypolarity | Returns the users with the lowest average polarity AND more than 150 posts  | {"users with lowest polarity and more than 150 posts":[{"_id":"tweetpet","avg":0,"total":310},{"_id":"lost_dog","avg":0,"total":549},{"_id":"wowlew","avg":0.03773584905660377,"total":212},{"_id":"mrs_mcsupergirl","avg":0.8860759493670886,"total":158},{"_id":"webwoke","avg":0.9391304347826087,"total":345},{"_id":"mcraddictal","avg":0.9565217391304348,"total":276},{"_id":"_magic8ball","avg":1.1216931216931216,"total":189},{"_id":"Dogbook","avg":1.2291666666666667,"total":192},{"_id":"JBnVFCLover786","avg":1.3006134969325154,"total":163},{"_id":"MiDesfileNegro","avg":1.310734463276836,"total":177}]} |
 
 
 This means that if you are running the application properly, you should be able to grap a webbrowser
